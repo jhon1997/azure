@@ -3,7 +3,11 @@
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabase1",
-			"type": "LinkedServiceReference"
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"urlKeyVault": "https://https://kv-acceso001.vault.azure.net/",
+				"secretNameKeyVault": "DatabaseConnectionazuredatabase01"
+			}
 		},
 		"parameters": {
 			"tblAQSDestino": {

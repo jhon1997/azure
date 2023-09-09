@@ -17,17 +17,12 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select distinct tabla_hub from ctrl.integracion_hub where productor='AQS' ",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "AzureSqlDataHubPro",
-						"type": "DatasetReference",
-						"parameters": {
-							"schema": "ctrl",
-							"tabla": "dual"
-						}
+						"referenceName": "sqldbazuredatabase01",
+						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
 				}
