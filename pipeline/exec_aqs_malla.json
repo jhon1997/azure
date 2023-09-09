@@ -15,6 +15,20 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "select distinct tabla_hub from ctrl.integracion_hub where productor='AQS'",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"dataset": {
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference",
+						"parameters": {
+							"schema": "ctrl",
+							"tabla": "dual"
+						}
+					},
 					"firstRowOnly": false
 				}
 			},
@@ -76,11 +90,14 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "AzureSqlRAWPRO",
+									"referenceName": "AzureSqlTable1",
 									"type": "DatasetReference",
 									"parameters": {
 										"schema": "aqs",
-										"table": "@replace(item().tabla_hub,'aqs','vw')"
+										"tabla": {
+											"value": "@replace(item().tabla_hub,'aqs','vw')",
+											"type": "Expression"
+										}
 									}
 								}
 							],
