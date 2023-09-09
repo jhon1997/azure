@@ -2,11 +2,19 @@
 	"name": "AzureSqlDatabase1",
 	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
+		"parameters": {
+			"schema": {
+				"type": "string"
+			},
+			"tabla": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
 			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=sql-serversazure1.database.windows.net;initial catalog=sqldb-azuredatabase01;user id=jpardob",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDhFOEZBNDAxLTg0ODYtNEU3OC04NDMxLTQxRjUwOUFFOTgyQV9kOTk2OGI4MS0xMDFmLTRhMmItYjljNy04ZWNmNzVkYmFjZTEiDQp9"
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDhFOEZBNDAxLTg0ODYtNEU3OC04NDMxLTQxRjUwOUFFOTgyQV8zYmVkMmFmMC02YzIyLTQzYjQtYTJjMy03ODUzODJiNzUyMDciDQp9"
 		}
 	}
 }
