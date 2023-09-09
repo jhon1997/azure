@@ -15,12 +15,6 @@
 			},
 			"table": {
 				"type": "string"
-			},
-			"urlKeyVault": {
-				"type": "string"
-			},
-			"secretNameKeyVault": {
-				"type": "string"
 			}
 		},
 		"annotations": [],
