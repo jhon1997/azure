@@ -1,0 +1,27 @@
+{
+	"name": "dsAQSTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"tblAQSDestino": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "AQS"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "hub",
+			"table": {
+				"value": "@dataset().tblAQSDestino",
+				"type": "Expression"
+			}
+		}
+	}
+}

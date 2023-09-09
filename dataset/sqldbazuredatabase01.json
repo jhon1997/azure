@@ -1,0 +1,20 @@
+{
+	"name": "sqldbazuredatabase01",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"urlKeyVault": "https://https://kv-acceso001.vault.azure.net/",
+				"secretNameKeyVault": "DatabaseConnectionazuredatabase01"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "UFTProjInvoiceJourStaging"
+		}
+	}
+}

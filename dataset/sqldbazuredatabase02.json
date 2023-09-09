@@ -1,0 +1,40 @@
+{
+	"name": "sqldbazuredatabase02",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"urlKeyVault\t": "https://https://kv-acceso001.vault.azure.net/",
+				"secretNameKeyVault\t": "DatabaseConnectionazuredatabase02"
+			}
+		},
+		"parameters": {
+			"schema": {
+				"type": "string"
+			},
+			"table": {
+				"type": "string"
+			},
+			"urlKeyVault": {
+				"type": "string"
+			},
+			"secretNameKeyVault": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().schema",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().table",
+				"type": "Expression"
+			}
+		}
+	}
+}
